@@ -9,14 +9,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
+import javax.annotation.Resource;
+
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ImportResource(locations = {"classpath:spring/*.xml"})
+@ImportResource(locations = {"spring/executors.xml"})
 @ComponentScan(basePackages = {"com.git.b.*","com.git.a.*"})
 public class ServerMain extends SpringBootServletInitializer {
 
-	@Autowired
+	@Resource
 	private ThreadPoolTaskExecutor taskExecutor;
 
 
