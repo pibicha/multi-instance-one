@@ -12,7 +12,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ImportResource("classpath:spring/*.xml")
+@ImportResource(locations = {"classpath:spring/*.xml"})
 @ComponentScan(basePackages = {"com.git.b.*","com.git.a.*"})
 public class ServerMain extends SpringBootServletInitializer {
 
